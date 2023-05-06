@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mongo:6
+  app:
+    build:
+      context: app
+    ports:
+      - '3000:3000'
+    environment:
+      DB_URL: mongodb://db:27017
