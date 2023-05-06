@@ -14,6 +14,8 @@ app.get('/envRuntime', (req, res) => {
     res.send(`The runtime environment variable is: ${process.env.MASSEYHACKS_VARIABLE_RUNTIME}`);
 })
 
+app.get("/static", express.static("static"))
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
